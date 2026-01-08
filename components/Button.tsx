@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 
@@ -10,16 +12,16 @@ interface ButtonProps {
 }
 
 export default function Button({ children, variant = 'primary', className = '', href, onClick }: ButtonProps) {
-  
+
   const baseStyles = "inline-flex items-center font-bold border-4 border-black transition-all active:translate-y-1 active:shadow-none";
-  
+
   const variants = {
     // Primary: White bg, Black text -> Hover: Black bg, Orange text (Mono Theme)
     primary: "bg-white text-black hover:bg-black hover:text-[#E8A22E] shadow-[var(--shadow-brutal)] hover:translate-y-[-4px]",
-    
+
     // Secondary: Orange bg, Black text -> Hover: White bg, Black text
     secondary: "bg-[#E8A22E] text-black hover:bg-white hover:text-black shadow-[var(--shadow-brutal)] hover:translate-y-[-4px]",
-    
+
     // Outline: Transparent/White, Black text -> Hover: Black bg, White text
     outline: "bg-transparent text-black hover:bg-black hover:text-white shadow-[var(--shadow-brutal)] hover:translate-y-[-4px]",
   };
