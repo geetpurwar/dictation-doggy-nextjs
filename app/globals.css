@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@source "../app";
+@source "../components";
+
+:root {
+  /* Mono-Brutalism Theme (Logo Derived) */
+  --color-primary: #E8A22E;
+  --color-primary-light: #FDF6E3; /* Light cream/yellow for backgrounds */
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-gray: #F0F0F0;
+  
+  /* Spacing */
+  --border-width: 4px;
+  --shadow-brutal: 8px 8px 0px rgba(0, 0, 0, 1);
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--color-gray);
+  color: var(--color-black);
+  line-height: 1.6;
+}
+
+/* Neo-Brutalism Utilities */
+.border-brutal {
+  border: var(--border-width) solid var(--color-black);
+}
+
+.shadow-brutal {
+  box-shadow: var(--shadow-brutal);
+}
+
+.shadow-brutal-hover {
+  transition: all 0.2s ease;
+}
+
+.shadow-brutal-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-brutal);
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection */
+::selection {
+  background: var(--color-primary);
+  color: var(--color-black);
+}
